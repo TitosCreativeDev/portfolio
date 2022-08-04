@@ -5,6 +5,137 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menuLateral {
+    /* background-color: red; */
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .menuLateral {
+    right: 16rem;
+    transition: 0.8s;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: #ffffff;
+    box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, .7);
+    transition: transform 1s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.3rem, .45rem);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.1rem, -.45rem);
+}
+
+.menuLateral span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C33764;
+    font-family: "Baloo 2", serif;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.menuLateral span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #C33764;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .menuLateral:hover span {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: 0.8s;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+
+.menu-link {
+    font-family: "Montserrat", serif;
+    font-size: 1.75rem;
+    color: #444;
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: #C33764;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i:hover{
+    color: #C33764;
+}
+
+.social-media i {
+    color: #555;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 1s
 }
 
 header {
@@ -84,7 +215,7 @@ header {
 }
 
 .banner button:hover{
-    opacity: .9;
+    opacity: 0.8;
 }
 
 @keyframes moveBanner {
