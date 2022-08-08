@@ -227,3 +227,213 @@ header {
         opacity: 1;
     }
 }
+
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(6, 4rem);
+    row-gap: 1.5rem;
+    text-transform: uppercase;
+}
+
+.habilidade:nth-child(1){
+    grid-column: 3 / 6;
+    grid-row: 1 / 3;
+}
+
+.habilidade:nth-child(2){
+    grid-column: 5 / 8;
+    grid-row: 3 / 5;
+}
+
+.habilidade:nth-child(3){
+    grid-column: 3 / 6;
+    grid-row: 5 / -1;
+}
+
+.habilidade:nth-child(4){
+    grid-column: 12 / 15;
+    grid-row: 1 / 3;
+}
+
+.habilidade:nth-child(5){
+    grid-column: 10 / 13;
+    grid-row: 3 / 5;
+}
+
+.habilidade:nth-child(6){
+    grid-column: 12 / 15;
+    grid-row: 5 / -1;
+}
+
+.skills {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.html {width: 90%; background-color: #f06529;}
+.css {width: 90%; background-color: #2965f1;}
+.design {width: 90%; background-color: #930094;}
+.javascript {width: 80%; background-color: #f0db4f;}
+.bootstrap {width: 80%; background-color: #563d7c;}
+.git {width: 70%; background-color: #211f1f;}
+
+.habilidade-text {
+    background-color: #b7bba6;
+}
+
+.sessao-habilidades{
+    background-color: #f5f5f5;
+    margin-top: 3rem;
+}
+
+.sessao-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-header h1 {
+    font-family: "Montserrat", serif;
+    font-size: 3rem;
+    color: #2e2e2e;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border-bottom: solid 3px #800080;
+}
+
+.habilidade-header{
+    display: flex;
+    align-items: center;
+    color: #2e2e2e;
+}
+
+.habilidade-header i{
+    font-size: 2.5rem;
+}
+
+.habilidade-header h3{
+    font-family: "Josefin Sans", serif;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+
+}
+
+.habilidade-text{
+    font-family: "Josefin Sans", serif;
+    margin-top: 1rem;
+}
+
+.habilidades-img-js {
+    width: 100%;
+    grid-column: 13 / 16;
+    grid-row: 2 / 5;
+}
+
+.habilidades-img-js img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.habilidades-img-html {
+    width: 100%;
+    grid-column: 2 / 5;
+    grid-row: 2 / 5;
+}
+
+.habilidades-img-html img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #262626;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    border-radius: 1rem;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.5;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.card-info h2 {
+    font-family: "Montserrat", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3 {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: rgba(255, 0, 0, 0.781);
+    margin-bottom: 1rem;
+}
+
+.card-info p {
+    font-family: "Josefin Sans", serif;
+    color: white;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+.card-info button {
+    font-family: "Baloo 2", serif;
+    width: 8rem;
+    height: 2rem;
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764); 
+    background: linear-gradient(to right, #1D2671, #C33764);
+    font-size: .85rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, .4);
+    color: #eee;
+    border: none;
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-projetos {
+    margin-top: 1rem;
+}
